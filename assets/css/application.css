@@ -1,6 +1,33 @@
-.container {
+@import url(https://fonts.googleapis.com/css?family=Amaranth:400,700);
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
   width: 100%;
-  text-align: center;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#form > label {
+  display: inline-block;
+  font-family: 'Amaranth', cursive;
+  color:white;
+  font-size: 200%;
 }
 
 .movieInfo {
@@ -16,14 +43,12 @@ img#posters{
   width: 150px;
 }
 
-
 @media (max-width: 1000px) {
   .center{}
-  .center-inner{left:25%;top:25%;position:absolute;width:50%;height:300px;background:#f0f;text-align:center;max-width:500px;max-height:500px;}
-  
+  .center-inner{left:25%;top:25%;position:absolute;width:50%;height:300px;text-align:center;max-width:500px;max-height:500px;}
 }
+
 @media (min-width: 1000px) {
   .center{left:50%;top:25%;position:absolute;}
-  .center-inner{width:500px;height:100%;margin-left:-250px;height:300px;background:#f0f;text-align:center;max-width:500px;max-height:500px;}
-  
+  .center-inner{width:500px;height:100%;margin-left:-250px;height:300px;text-align:center;max-width:500px;max-height:500px;}
 }
