@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.movieInfo {
+  display: inline-block;
+  padding: 20px;
+}
+
+img#posters{
+  width: 150px;
+}
+
+.title {
+  width: 150px;
+}
