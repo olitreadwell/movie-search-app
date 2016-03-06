@@ -23,6 +23,12 @@ img.bg {
   }
 }
 
+form {
+  background: black;
+  padding: 8%;
+  border-radius: 30px;
+}
+
 #form > label {
   display: inline-block;
   font-family: 'Amaranth', cursive;
@@ -33,6 +39,12 @@ img.bg {
 .movieInfo {
   display: inline-block;
   padding: 20px;
+}
+
+#movieList {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 30px;
 }
 
 img#posters{
