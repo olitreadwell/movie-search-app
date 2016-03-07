@@ -2,15 +2,17 @@ $(document).ready(function(){
 
   $('#form').submit(function(event) {
     event.preventDefault();
+
     var query_terms = $('form').serialize().slice(2);
-    $.get( "https://www.omdbapi.com/?s=" + query_terms,
+    $.get( "https://www.omdbapi.com/?s=" + query_terms +"&plot=full&r=json",
            function( data ) {
              $("#movieList").html("");
              var movieResults = data.Search;
+             console.log(movieResults);
 
              var createdHtmlString = "";
 
-             for (i=0; i<movieResults.length; i++) {
+             for (i=0; i < movieResults.length; i++) {
                event.preventDefault();
                var movie = movieResults[i]
                //For each movie object, create a piece of HTML
