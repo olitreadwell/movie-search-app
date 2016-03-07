@@ -2,14 +2,11 @@ $(document).ready(function(){
 
   $('#form').submit(function(event) {
     event.preventDefault();
-    console.log("prevented default action");
     var query_terms = $('form').serialize().slice(2);
-    $.get( "https://www.omdbapi.com/?s=" +query_terms +"&y=&plot=full&r=json",
+    $.get( "https://www.omdbapi.com/?s=" + query_terms,
            function( data ) {
-             // event.preventDefault();
              $("#movieList").html("");
              var movieResults = data.Search;
-
 
              var createdHtmlString = "";
 
@@ -28,7 +25,7 @@ $(document).ready(function(){
                    "</div>" +
                    "</div>"
                var createdHtmlString = createdHtmlString +  htmlString;
-             }
+             };
 
              var createdHtmlString
 
